@@ -56,7 +56,7 @@ class FoodsListAPI(Resource):
         result = FoodModel.query.order_by(FoodModel.nme).all()
         return [ marshal(food, resource_fields) for food in result ]
         
-api.add_resource(FoodsListAPI, '/api/v1.0/foods/<float:crb>/<float:fat>/<float:pro>/<float:sug>', endpoint='foods')
+api.add_resource(FoodsListAPI, '/api/v1.0/foods/<int:crb>/<int:fat>/<int:pro>/<int:sug>', endpoint='foods')
 
 if __name__ == '__main__':
     app.run(debug=True)
