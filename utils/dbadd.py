@@ -18,20 +18,6 @@ def conv(s: str):
     except ValueError:
         return None
 
-class Food:
-    def __init__(self, fid, nme, wgt, srv, pro, fat, crb, sgr):
-        self.fid = fid
-        self.nme = nme
-        self.wgt = wgt
-        self.srv = srv
-        self.pro = pro
-        self.fat = fat
-        self.crb = crb
-        self.sgr = sgr
-
-    def __repr__(self):
-        return f'{self.fid}'
-
 def main():
 
     db = sqlite3.connect(DBPATH)
