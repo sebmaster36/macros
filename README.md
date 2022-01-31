@@ -31,9 +31,9 @@ todo
 
 | Endpoint | Parameters | Response (JSON) |
 | --------------- | --------------- | --------------- |
-| /foods | none | all foods in the database |
-| /foods/\<int:fid\> | food ID | food in database matching ID  |
-| /foods/query/?... | see below | foods matching entered parameters |
+| `/foods` | none | all foods in the database |
+| `/foods/<int:fid>` | food ID | food in database matching ID  |
+| `/foods/query/...` | see below | foods matching entered parameters |
 
 #### Query String
 
@@ -73,7 +73,7 @@ Response preview:
 | Carbs: 'crb'  |
 | Protein: 'prt' |
 | Fat: 'fat' |
-| Sugars: 'sgr'|
+| Sugar: 'sgr'|
 
 | Operation |
 | --------------- | 
@@ -83,7 +83,7 @@ Response preview:
 
 Format:
 ```
-?{macronutrient}={operation}-{numerical value}&...
+BASE_URI + '/foods/query/' + ?{macronutrient}={operation}-{numerical value}&...
 ```
 
 ## Technologies Used
