@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="py-5 text-center">
+    <h1>&#128523</h1>
+    <h2>macros</h2>
+    <p class="lead">Foods, Just for you.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-5 mb-3">
+
+        {% for food in foods %}
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ food.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> Food No. {{ food.id }}</h6>
+                <p class="card-text">Serving Size: {{ food.serving}} ({{ food.weight }} g)</p>
+                <a href="#" class="card-link">Carbs: {{ food.carbs }} g</a>
+                <a href="#" class="card-link">Protein: {{ food.protein }} g</a>
+                <a href="#" class="card-link">Fat: {{ food.fat }} g</a>
+                <a href="#" class="card-link">Sugar: {{ food.sugar }} g</a>
+            </div>
+        </div>
+
+        {% endfor %}
+
+        {% endblock content %}
+
+    </div>
+</div>
