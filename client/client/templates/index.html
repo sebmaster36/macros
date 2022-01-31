@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block content %}
+        <div class="py-5 text-center">
+            <h1>&#128523</h1>
+            <h2>macros</h2>
+            <p class="lead">Bulking season? Find foods that fit your calorie goals.</p>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12 order-md-1">
+                <h4 class="mb-3">Start Here</h4>
+                <form class="needs-validation" action="{{ url_for('index_form') }}" method="post" novalidate="">
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="nutrient">Nutrient</label>
+                            <select class="custom-select d-block w-100" id="nutrient" name="nut1_type" required="">
+                                <option value="">Choose...</option>
+                                <option value="prt">Protein</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="operator">Amount</label>
+                            <select class="custom-select d-block w-100" id="operator" name="nut1_op" required="">
+                                <option value="">Choose...</option>
+                                <option value="lt">less than</option>
+                                <option value="eq">equal to</option>
+                                <option value="gt">greater than</option>
+                            </select>
+                            <div class="invalid-feedback"> Please choose one. </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="value">Value</label>
+                            <input type="text" class="form-control" id="value" name="nut1_val" placeholder="grams" required="">
+                            <div class="invalid-feedback"> Value required </div>
+                        </div>
+                    </div>
+
+                    <!-- Second -->
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <select class="custom-select d-block w-100" id="nutrient" name="nut2_type" required="">
+                                <option value="">Choose...</option>
+                                <option value="crb">Carbohydrates</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <select class="custom-select d-block w-100" id="operator" name="nut2_op" required="">
+                                <option value="">Choose...</option>
+                                <option value="lt">less than</option>
+                                <option value="eq">equal to</option>
+                                <option value="gt">greater than</option>
+                            </select>
+                            <div class="invalid-feedback"> Please choose one. </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="text" class="form-control" id="value" name="nut2_val" placeholder="grams" required="">
+                            <div class="invalid-feedback"> Value required </div>
+                        </div>
+                    </div>
+
+                    <!-- Third -->
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <select class="custom-select d-block w-100" id="nutrient" name="nut3_type" required="">
+                                <option value="">Choose...</option>
+                                <option value="fat">Fat</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <select class="custom-select d-block w-100" id="operator" name="nut3_op" required="">
+                                <option value="">Choose...</option>
+                                <option value="lt">less than</option>
+                                <option value="eq">equal to</option>
+                                <option value="gt">greater than</option>
+                            </select>
+                            <div class="invalid-feedback"> Please choose one. </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="text" class="form-control" id="value" name="nut3_val" placeholder="grams" required="">
+                            <div class="invalid-feedback"> Value required </div>
+                        </div>
+                    </div>
+
+                    <!-- Fourth -->
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <select class="custom-select d-block w-100" id="nutrient" name="nut4_type" required="">
+                                <option value="">Choose...</option>
+                                <option value="sgr">Sugar</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <select class="custom-select d-block w-100" id="operator" name="nut4_op" required="">
+                                <option value="">Choose...</option>
+                                <option value="lt">less than</option>
+                                <option value="eq">equal to</option>
+                                <option value="gt">greater than</option>
+                            </select>
+                            <div class="invalid-feedback"> Please choose one. </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="text" class="form-control" id="value" name="nut4_val" placeholder="grams" required="">
+                            <div class="invalid-feedback"> Value required </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Find Foods</button>
+                </form>
+            </div>
+        </div>
+{% endblock content %}
