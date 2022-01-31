@@ -20,8 +20,22 @@ cd restserver (necessary for relative database path)
 ```
 5. (Optional) Run the client (in a different window)
 ```
-todo
+cd client
+flask run -p 5001
 ```
+6. visit site and enjoy!
+
+
+## Site
+### Filling out the form:
+> no need to fill out nutrients you aren't looking for!
+
+
+![image](https://user-images.githubusercontent.com/63259450/151837969-ab7bfce3-a8ec-40d6-9e6f-5d5d9d975e91.png)
+### Sample Results:
+![image](https://user-images.githubusercontent.com/63259450/151838685-b6f4ade5-5d8a-41e9-9799-7c608bab4b62.png)
+
+
 
 ## Rest API Documentation (for standalone usage or curiosity purposes)
 
